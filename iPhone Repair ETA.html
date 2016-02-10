@@ -1,0 +1,62 @@
+<head>
+  <title>iPhone Repair ETA</title>
+  <!-- Imports font from Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
+  <!-- Brings in stylesheet and javascript -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+<h1>
+Next iPhone RFP at...
+</h1>
+<!-- section for clock formatted based off of time.app -->
+<div>
+	<!-- section kept in table for formatting -->
+<table>
+<tr><td>
+	<!-- all of the values will be replaced by javascript -->
+<h2 id="ETAhr">00</h2></td>
+<td><h2 id="colon">:</h2></td>
+<td><h2 id="ETAmin">00</h2></td>
+<td><h2><table style="width:100%">
+  <tr>
+    <td id="ETAsec">00</td>
+  </tr>
+  <tr>
+    <td id="pm">pm</td>
+  </tr>
+</table>
+<div id="ETAstring"></div>
+</h2>
+</td></tr>
+</table>
+</div>
+<h1 id='iphoneRepairBreak'>
+<!-- will be filled by javascript when break is selected -->
+</h1>
+<!-- Section for selecting the amount of time being quoted for each iPhone repair.
+Originally this section was a single dropdown menu but switched to buttons for 
+efficiency based off of feedback (changing time has been reduced from two clicks 
+to one by this change) -->
+<div id="timeSelect">
+<br>
+<button type="button" id="button30" onclick="setDuration(30)" class="active">30 min</button>
+<button type="button" id="button45" onclick="setDuration(45)">45 min</button>
+<button type="button" id="button60" onclick="setDuration(60)">1 hr</button>
+<button type="button" id="button75" onclick="setDuration(75)">1 hr 15 min</button>
+<button type="button" id="button90" onclick="setDuration(90)">1 hr 30 min</button>
+<br>
+<button type="button" id="buttonask" onclick="setDuration('ask')">Ask</button>
+<button type="button" id="buttondone" onclick="setDuration('done')">Done</button>
+<button type="button" id="breakButton" onclick="toggleBreak()">Break</button>
+<div id='vButton'><button type="button" id="vButton" onclick="showVisuals()"><img src='settings.png'></img></button></div>
+<div id="visuals">
+	<button type="button" id="nightButton" onclick="toggleNight()">Night Mode</button>
+	<button type="button" id="shapesButton" onclick="toggleShapes()">Button Shapes</button>
+	<button type="button" id="secondsButton" onclick="toggleSeconds()">Show Seconds</button>
+	<button type="button" id="roundButton" onclick="toggleRound()">Round Up</button>
+</div>
+</body>
